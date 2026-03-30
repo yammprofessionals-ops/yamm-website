@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YAMM Ministry</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f7f4;
+color:#1b1b1b;
+}
+
+header{
+background:#0b5d2a;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#084d22;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:40px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.progress{
+background:#ddd;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress-bar{
+height:20px;
+background:#0b5d2a;
+width:1%;
+}
+
+footer{
+background:#0b5d2a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Young Adventist Mentors & Missionaries</h1>
+<p>Mission • Mentorship • Evangelism</p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#mission">Mission 2026</a>
+<a href="#fund">Fund Drive</a>
+<a href="#join">Join</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+<h2>About YAMM</h2>
+<div class="card">
+Founded in 2020, YAMM is a structured youth evangelistic and mentorship ministry rooted in the Seventh-day Adventist Church.  
+The ministry mobilizes students, young professionals and church youth for organized mission outreach, discipleship and community transformation across Kenya.
+</div>
+</section>
+
+<section id="mission">
+<h2>Annual Mission 2026</h2>
+<div class="card">
+Mission Dates: <b>20 December 2026 – 3 January 2027</b><br><br>
+Mission Support Target: <b>KES 250,000</b>
+
+<h3>Mission Countdown</h3>
+<p id="countdown"></p>
+</div>
+</section>
+
+<section id="fund">
+<h2>PA Mission Fund Drive</h2>
+<div class="card">
+Target: <b>KES 750,000</b><br>
+Raised: <b>KES 6,492</b>
+
+<div class="progress">
+<div class="progress-bar"></div>
+</div>
+
+<br>
+Send Contributions To:<br>
+<b>Treasurer Ouya Lavender</b><br>
+<b>+254 797 585985</b>
+</div>
+</section>
+
+<section>
+<h2>Mission History</h2>
+<div class="card">
+2020 – Kuja Kanyango SDA Church<br>
+2021 – Agoro Sare SDA Church<br>
+2022 – Rabondo SDA Church<br>
+2023 – Liulo SDA Church<br>
+2024 – Kipasi SDA Church<br>
+2025 – Migori West SDA Church
+</div>
+</section>
+
+<section id="join">
+<h2>Join YAMM</h2>
+<div class="card">
+Youth passionate about mission, mentorship and evangelism are welcome.<br><br>
+Contact leadership to register interest.
+</div>
+</section>
+
+<section id="contact">
+<h2>Official Contacts</h2>
+<div class="card">
+Email: yamm.professionals@gmail.com<br>
+Chairperson: Jeremiah Ojwang<br>
+Deputy Chairperson: Becky Akoth
+</div>
+</section>
+
+<footer>
+© 2026 YAMM Ministry | Structured Mission Movement
+</footer>
+
+<!-- Countdown Script -->
+<script>
+var countDownDate = new Date("Dec 20, 2026 08:00:00").getTime();
+
+var x = setInterval(function() {
+var now = new Date().getTime();
+var distance = countDownDate - now;
+
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+document.getElementById("countdown").innerHTML =
+days + " days remaining";
+
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("countdown").innerHTML = "Mission Started";
+}
+}, 1000);
+</script>
+
+<!-- Fund Progress Script -->
+<script>
+var raised = 6492;
+var target = 750000;
+var percent = (raised/target)*100;
+document.querySelector(".progress-bar").style.width = percent + "%";
+</script>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/254797585985"
+style="position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;
+padding:15px;border-radius:50%;
+text-decoration:none;font-size:20px;">
+💬
+</a>
+
+</body>
+</html>
